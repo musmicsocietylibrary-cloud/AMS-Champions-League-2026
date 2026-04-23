@@ -1,243 +1,243 @@
 /* ===== ROOT COLORS (PRO LEVEL PALETTE) ===== */
 :root {
-    --primary: #0a1f44;        /* Deep navy (authority) */
-    --secondary: #1e3a8a;      /* Royal blue */
-    --accent: #fbbf24;         /* Gold highlight */
-    --success: #22c55e;        /* Green */
-    --info: #3b82f6;           /* Blue */
-    --warning: #f59e0b;        /* Orange */
-    --danger: #ef4444;         /* Red */
-    --light: #f8fafc;          /* Background */
-    --white: #ffffff;
-    --text: #1f2937;
-    --shadow: rgba(0,0,0,0.08);
+  --primary: #0a1f44; /* Deep navy (authority) */
+  --secondary: #1e3a8a; /* Royal blue */
+  --accent: #fbbf24; /* Gold highlight */
+  --success: #22c55e; /* Green */
+  --info: #3b82f6; /* Blue */
+  --warning: #f59e0b; /* Orange */
+  --danger: #ef4444; /* Red */
+  --light: #f8fafc; /* Background */
+  --white: #ffffff;
+  --text: #1f2937;
+  --shadow: rgba(0, 0, 0, 0.08);
 }
 
 /* ===== RESET ===== */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* ===== BODY ===== */
 body {
-    font-family: "Segoe UI", system-ui, sans-serif;
-    background: var(--light);
-    color: var(--text);
-    line-height: 1.6;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  background: var(--light);
+  color: var(--text);
+  line-height: 1.6;
 }
 
 /* ===== HEADER (PREMIUM HERO STYLE) ===== */
 header {
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
-    color: var(--white);
-    text-align: center;
-    padding: 40px 20px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: var(--white);
+  text-align: center;
+  padding: 40px 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .logo {
-    max-width: 90px;
-    margin-bottom: 12px;
+  max-width: 90px;
+  margin-bottom: 12px;
 }
 
 header h1 {
-    font-size: 32px;
-    font-weight: 800;
-    letter-spacing: 1px;
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: 1px;
 }
 
 .subtitle {
-    font-size: 16px;
-    opacity: 0.9;
+  font-size: 16px;
+  opacity: 0.9;
 }
 
 /* ===== NAVIGATION (SMOOTH + MODERN) ===== */
 nav {
-    display: flex;
-    overflow-x: auto;
-    background: var(--white);
-    padding: 12px;
-    border-bottom: 1px solid #e5e7eb;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+  display: flex;
+  overflow-x: auto;
+  background: var(--white);
+  padding: 12px;
+  border-bottom: 1px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 nav a {
-    text-decoration: none;
-    color: var(--primary);
-    font-weight: 600;
-    margin-right: 20px;
-    padding: 6px 10px;
-    border-radius: 6px;
-    transition: 0.3s;
+  text-decoration: none;
+  color: var(--primary);
+  font-weight: 600;
+  margin-right: 20px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: 0.3s;
 }
 
 nav a:hover {
-    background: var(--accent);
-    color: #000;
+  background: var(--accent);
+  color: #000;
 }
 
 nav::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 /* ===== SECTIONS (CARD SYSTEM) ===== */
 section {
-    background: var(--white);
-    margin: 25px auto;
-    padding: 25px;
-    width: 90%;
-    border-radius: 14px;
-    box-shadow: 0 6px 20px var(--shadow);
-    transition: 0.3s;
+  background: var(--white);
+  margin: 25px auto;
+  padding: 25px;
+  width: 90%;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px var(--shadow);
+  transition: 0.3s;
 }
 
 section:hover {
-    transform: translateY(-3px);
+  transform: translateY(-3px);
 }
 
 /* ===== HEADINGS ===== */
 h2 {
-    color: var(--primary);
-    margin-bottom: 12px;
-    border-left: 6px solid var(--accent);
-    padding-left: 10px;
-    font-size: 22px;
+  color: var(--primary);
+  margin-bottom: 12px;
+  border-left: 6px solid var(--accent);
+  padding-left: 10px;
+  font-size: 22px;
 }
 
 h3 {
-    margin-top: 15px;
-    color: var(--secondary);
+  margin-top: 15px;
+  color: var(--secondary);
 }
 
 /* ===== LISTS ===== */
 ul {
-    margin-left: 20px;
-    margin-top: 10px;
+  margin-left: 20px;
+  margin-top: 10px;
 }
 
 li {
-    margin-bottom: 6px;
+  margin-bottom: 6px;
 }
 
 /* ===== SPECIAL SECTIONS ===== */
 #finals {
-    background: linear-gradient(to right, #fff8e1, #fde68a);
-    border: 2px solid var(--accent);
+  background: linear-gradient(to right, #fff8e1, #fde68a);
+  border: 2px solid var(--accent);
 }
 
 #results ul {
-    background: #ecfdf5;
-    border-left: 5px solid var(--success);
-    padding: 10px;
-    border-radius: 6px;
+  background: #ecfdf5;
+  border-left: 5px solid var(--success);
+  padding: 10px;
+  border-radius: 6px;
 }
 
 #announcements ul {
-    background: #fff7ed;
-    border-left: 5px solid var(--warning);
-    padding: 10px;
-    border-radius: 6px;
+  background: #fff7ed;
+  border-left: 5px solid var(--warning);
+  padding: 10px;
+  border-radius: 6px;
 }
 
 #performers {
-    background: linear-gradient(to right, #fff8e1, #fde68a);
-    border: 2px solid var(--accent);
+  background: linear-gradient(to right, #fff8e1, #fde68a);
+  border: 2px solid var(--accent);
 }
 
 /* ===== TABLE ===== */
 table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 15px;
-    border-radius: 10px;
-    overflow: hidden;
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 table th {
-    background: var(--primary);
-    color: var(--white);
-    padding: 12px;
+  background: var(--primary);
+  color: var(--white);
+  padding: 12px;
 }
 
 table td {
-    padding: 10px;
-    text-align: center;
-    border-bottom: 1px solid #e5e7eb;
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #e5e7eb;
 }
 
 table tr:hover {
-    background: #f1f5f9;
+  background: #f1f5f9;
 }
 
 /* ===== FOOTER ===== */
 footer {
-    background: var(--primary);
-    color: var(--white);
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
+  background: var(--primary);
+  color: var(--white);
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
 }
 
 /* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 768px) {
+  header {
+    padding: 25px 10px;
+  }
 
-    header {
-        padding: 25px 10px;
-    }
+  .logo {
+    max-width: 70px;
+  }
 
-    .logo {
-        max-width: 70px;
-    }
+  header h1 {
+    font-size: 22px;
+  }
 
-    header h1 {
-        font-size: 22px;
-    }
+  .subtitle {
+    font-size: 14px;
+  }
 
-    .subtitle {
-        font-size: 14px;
-    }
+  section {
+    width: 100%;
+    padding: 18px;
+  }
 
-    section {
-        width: 100%;
-        padding: 18px;
-    }
+  nav a {
+    font-size: 13px;
+    margin-right: 12px;
+  }
 
-    nav a {
-        font-size: 13px;
-        margin-right: 12px;
-    }
+  table {
+    display: block;
+    overflow-x: auto;
+  }
 
-    table {
-        display: block;
-        overflow-x: auto;
-    }
-
-    table th, table td {
-        white-space: nowrap;
-        font-size: 12px;
-    }
+  table th,
+  table td {
+    white-space: nowrap;
+    font-size: 12px;
+  }
 }
 
 /* SMALL PHONES */
 @media (max-width: 480px) {
+  header h1 {
+    font-size: 18px;
+  }
 
-    header h1 {
-        font-size: 18px;
-    }
+  .subtitle {
+    font-size: 12px;
+  }
 
-    .subtitle {
-        font-size: 12px;
-    }
+  nav a {
+    font-size: 11px;
+  }
 
-    nav a {
-        font-size: 11px;
-    }
-
-    table th, table td {
-        font-size: 10px;
-    }
+  table th,
+  table td {
+    font-size: 10px;
+  }
 }
