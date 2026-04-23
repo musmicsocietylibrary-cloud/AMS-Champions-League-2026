@@ -145,6 +145,7 @@ li {
 
 #performers {
     background: linear-gradient(to right, #fff8e1, #fde68a);
+    border: 2px solid var(--accent);
 }
 
 /* ===== TABLE ===== */
