@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ams-champions-league-2026.onrender.com/sitemap.xml
