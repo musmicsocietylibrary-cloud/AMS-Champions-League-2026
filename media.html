@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>AMS Tournament Media Gallery 2026</title>
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <div class="top-nav">
+    <a href="index.html" class="home-btn">Go to Home Page</a>
+  </div>
+
+  <body>
+    <!-- ===== HEADER ===== -->
+    <header>
+      <h1>AMS Champions League Media Gallery</h1>
+      <p>Photos & Videos Highlights</p>
+    </header>
+
+    <!-- ===== FILTER BUTTONS ===== -->
+    <section class="filters">
+      <button onclick="filterGallery('all')">All</button>
+      <button onclick="filterGallery('football')">Football</button>
+      <button onclick="filterGallery('netball')">Netball</button>
+      <button onclick="filterGallery('volleyball')">Volleyball</button>
+    </section>
+
+    <!-- ===== PHOTO GALLERY ===== -->
+    <section id="photo-gallery">
+      <h2>Photos</h2>
+
+      <div class="grid">
+        <img
+          src="media/Football1.jpeg"
+          class="football"
+          onclick="openLightbox(this.src)"
+        />
+        <img
+          src="media/Football2.jpeg"
+          class="football"
+          onclick="openLightbox(this.src)"
+        />
+        <img
+          src="media/Football3.jpg"
+          class="football"
+          onclick="openLightbox(this.src)"
+        />
+        <img
+          src="media/netball1.jpg"
+          class="netball"
+          onclick="openLightbox(this.src)"
+        />
+        <img
+          src="media/netball2.jpg"
+          class="netball"
+          onclick="openLightbox(this.src)"
+        />
+        <img
+          src="media/netball3.jpg"
+          class="netball"
+          onclick="openLightbox(this.src)"
+        />
+        <img
+          src="media/netball4.jpg"
+          class="netball"
+          onclick="openLightbox(this.src)"
+        />
+        <img
+          src="media/netball5.jpg"
+          class="netball"
+          onclick="openLightbox(this.src)"
+        />
+        <img
+          src="media/netball6.jpg"
+          class="netball"
+          onclick="openLightbox(this.src)"
+        />
+        <img
+          src="media/netball7.jpg"
+          class="netball"
+          onclick="openLightbox(this.src)"
+        />
+        <img
+          src="media/netball8.jpg"
+          class="netball"
+          onclick="openLightbox(this.src)"
+        />
+        <img
+          src="media/netball9.jpg"
+          class="netball"
+          onclick="openLightbox(this.src)"
+        />
+        <img
+          src="media/netball10.jpg"
+          class="netball"
+          onclick="openLightbox(this.src)"
+        />
+        <img
+          src="media/netball12.jpg"
+          class="netball"
+          onclick="openLightbox(this.src)"
+        />
+        <img
+          src="media/Volleyball1.jpg"
+          class="volleyball"
+          onclick="openLightbox(this.src)"
+        />
+        <img
+          src="media/volleyball2.jpg"
+          class="volleyball"
+          onclick="openLightbox(this.src)"
+        />
+        <img
+          src="media/volleyball3.jpg"
+          class="volleyball"
+          onclick="openLightbox(this.src)"
+        />
+        <img
+          src="media/volleyball4.jpg"
+          class="volleyball"
+          onclick="openLightbox(this.src)"
+        />
+        <img
+          src="media/volleyball5.jpg"
+          class="volleyball"
+          onclick="openLightbox(this.src)"
+        />
+        <img
+          src="media/volleyball6.jpg"
+          class="volleyball"
+          onclick="openLightbox(this.src)"
+        />
+        <img
+          src="media/volleyball7.jpg"
+          class="volleyball"
+          onclick="openLightbox(this.src)"
+        />
+        <img
+          src="media/volleyball8.jpg"
+          class="volleyball"
+          onclick="openLightbox(this.src)"
+        />
+        <img
+          src="media/volleyball9.jpg"
+          class="volleyball"
+          onclick="openLightbox(this.src)"
+        />
+        <img
+          src="media/photo4.jpg"
+          class="football"
+          onclick="openLightbox(this.src)"
+        />
+        <img
+          src="media/photo5.jpg"
+          class="netball"
+          onclick="openLightbox(this.src)"
+        />
+        <img
+          src="media/photo6.jpg"
+          class="football"
+          onclick="openLightbox(this.src)"
+        />
+      </div>
+    </section>
+
+    <!-- ===== VIDEO GALLERY ===== -->
+    <section id="video-gallery">
+      <h2>Videos</h2>
+
+      <div class="video-grid">
+        <iframe src="media/AMS Football Final.mp4" allowfullscreen></iframe>
+
+        <iframe src="media/AMS NETBALL FINAL.mp4" allowfullscreen></iframe>
+
+        <iframe src="media/AMS VOLLEYBALL FINAL.mp4" allowfullscreen></iframe>
+        <iframe src="media/DGI.mp4" allowfullscreen></iframe>
+        <iframe src="media/SS.mp4" allowfullscreen></iframe>
+        <iframe src="media/After the game.mp4" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <!-- ===== LIGHTBOX ===== -->
+    <div id="lightbox" onclick="closeLightbox()">
+      <img id="lightbox-img" />
+    </div>
+
+    <!-- ===== JS ===== -->
+    <script>
+      function openLightbox(src) {
+        document.getElementById("lightbox").style.display = "flex";
+        document.getElementById("lightbox-img").src = src;
+      }
+
+      function closeLightbox() {
+        document.getElementById("lightbox").style.display = "none";
+      }
+
+      /* ===== FILTER SYSTEM ===== */
+      function filterGallery(category) {
+        let images = document.querySelectorAll(".grid img");
+
+        images.forEach((img) => {
+          if (category === "all") {
+            img.style.display = "block";
+          } else {
+            img.style.display = img.classList.contains(category)
+              ? "block"
+              : "none";
+          }
+        });
+      }
+    </script>
+    <!-- ===== FOOTER ===== -->
+    <footer>
+      <p>© 2026 AMS Champions League | MUST Malawi</p>
+      <p>Built for Sports Excellence & Student Unity</p>
+
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="#photo-gallery">Photos</a>
+        <a href="#video-gallery">Videos</a>
+      </div>
+    </footer>
+    <script>
+      const videos = document.querySelectorAll("video");
+
+      videos.forEach((video) => {
+        video.addEventListener("play", () => {
+          videos.forEach((v) => {
+            if (v !== video) v.pause();
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
