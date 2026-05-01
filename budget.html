@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>AMS Budget Allocation 2026 | MUST</title>
+
+    <meta
+      name="description"
+      content="Official budget allocation for AMS Champions League 2026 at MUST Malawi. Transparent financial breakdown."
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <!-- ===== HEADER ===== -->
+    <header class="main-header">
+      <div class="container nav-container">
+        <div class="brand">
+          <img src="media/must logo.png" alt="MUST Logo" />
+          <h1>AMS Budget 2026</h1>
+        </div>
+
+        <nav class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="index.html#media">Media</a>
+          <a href="index.html#sponsors">Sponsorship</a>
+        </nav>
+      </div>
+    </header>
+    <!-- ===== DASHBOARD ===== -->
+    <section class="budget-section container">
+      <!-- DOCUMENT -->
+      <h3>Official Document</h3>
+      <iframe
+        src="media/AMS Budget Allocation.pdf"
+        width="100%"
+        height="500"
+      ></iframe>
+
+      <!-- ACTIONS -->
+      <div class="budget-actions">
+        <a href="media/AMS Budget Allocation.pdf" download class="btn-primary"
+          >Download PDF</a
+        >
+        <button onclick="window.print()" class="btn-secondary">Print</button>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+      <p>© 2026 AMS Champions League | MUST</p>
+    </footer>
+
+    <script>
+      let lastScrollY = window.scrollY;
+      const header = document.querySelector(".main-header");
+
+      const SCROLL_THRESHOLD = 10;
+
+      window.addEventListener("scroll", () => {
+        const currentScrollY = window.scrollY;
+
+        // Prevent tiny movements from triggering
+        if (Math.abs(currentScrollY - lastScrollY) < SCROLL_THRESHOLD) return;
+
+        // At top → always show
+        if (currentScrollY <= 0) {
+          header.classList.remove("hide");
+        }
+        // Scrolling DOWN → SHOW header
+        else if (currentScrollY > lastScrollY) {
+          header.classList.remove("hide");
+        }
+        // Scrolling UP → HIDE header
+        else {
+          header.classList.add("hide");
+        }
+
+        lastScrollY = currentScrollY;
+      });
+    </script>
+  </body>
+</html>
